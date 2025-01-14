@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+  <!-- Указание кодировки страницы -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Защита страницы паролем</title>
+
+  <!-- Подключение файла стилей -->
+  <link rel="stylesheet" href="../style.css" type="text/css" />
+
+  <!-- Скрипт для проверки пароля -->
+  <script language="JavaScript">
+      // Запрашиваем у пользователя пароль через диалоговое окно
+      login = prompt('Введите логин:', '');
+      pass = prompt('Введите пароль:', '');
+      if (pass === '1313' && login === "admin") { // Проверка на корректность пароля
+          alert('Пароль верный, логин тоже верный. Добро пожаловать!');
+      } else {
+          // При неверном пароле перенаправляем пользователя на главную страницу
+          alert('Пароль неверный или логин не верный. Или и то, и то. Доступ запрещен.');
+          top.location.href = "../index.html";
+      }
+  </script>
+
+  <!-- Локальные стили для оформления контента -->
+  <style>
+  .container {
+    border: 2px solid #AA8181;
+    background-color: #FFE8E8;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0;
+  }
+
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .container img {
+    float: left;
+    margin-right: 20px;
+    border: 3px solid #AA8181;
+    border-radius: 50%;
+  }
+
+  .container span {
+    font-size: 20px;
+    margin-right: 15px;
+  }
+
+  @media (max-width: 500px) {
+    .container {
+        text-align: center;
+    }
+    .container img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+  }
+  </style>
+</head>
+<body>
+    <!-- Основной каркас страницы -->
+    <div id="basic">
+
+      <!-- Шапка сайта -->
+      <div id="head-site">
+          <!-- Логотип -->
+          <a href="../index.html">
+              <img src="../images/logo_my.png" alt="Julia's Flowers" title="Julia's Flowers" />
+          </a>
+          <!-- Контактный номер -->
+          <img src="../images/phone.png" alt="+7 (3537) 25-60-60" title="+7 (3537) 25-60-60" class="telefon" />
+      </div>
+
+      <!-- Верхнее меню -->
+      <div id="menu-top">
+          <div class="bg-1">
+              <!-- Список пунктов верхнего меню -->
+              <ul>
+                  <li><a href="../about_us.html">О нас</a></li>
+                  <li><a href="../assortiment.html">Ассортимент</a></li>
+                  <li><a href="../our_works.html">Наши работы</a></li>
+                  <li><a href="../auth_users/otzivi.html">Отзывы</a></li>
+                  <li><a href="../order_a_bouquet.html">Заказать букет</a></li>
+                  <li><a href="../nashi-klienty.html">Наши клиенты</a></li>
+                  <li class="none-bg"><a href="../contacts.html">Контакты</a></li>
+              </ul>
+          </div>
+          <div class="bg-2"></div>
+      </div>
+
+      <!-- Основное содержимое страницы -->
+      <div id="content">
+
+          <!-- Правый блок контента -->
+          <div class="right">
+              <h1>Страница администратора</h1>
+              <p>Место для размещения секретного контента</p>
+              <!-- Пример изображения -->
+              <img src="../images/pig.jpg" alt="Avatar" style="width:500px">
+              <!-- Ссылка для возврата на главную страницу -->
+              <p><a href="index.html">Перейти на главную страницу</a></p>
+          </div>
+
+          <!-- Левое меню -->
+          <div class="left">
+              <div id="left-menu">
+                  <div class="block-nad-menu"></div>
+                  <div class="block-menu">
+                      <!-- Список категорий -->
+                      <ul>
+                          <li><a href="../monobouquets.html">Монобукеты</a></li>
+                          <li><a href="../potted_flowers.html">Цветы в горшке</a></li>
+                          <li><a href="../custom_bouquets.html">Букеты на заказ</a></li>
+                          <li><a href="../seasonal_bouquets.html">Сезонные букеты</a></li>
+                          <li><a href="../floral_arrangements_for_interiors.html">Цветочные композиции для интерьера</a></li>
+                          <li><a href="../flower_baskets.html">Цветочные корзины</a></li>
+                          <li><a href="../dried_and_preserved_flowers.html">Сухоцветы и стабилизированные цветы</a></li>
+                          <li><a href="../terrariums.html">Флорариумы</a></li>
+                          <li class="none-bg"><a href="../wedding_bouquets.html">Свадебные букеты</a></li>
+                      </ul>
+                  </div>
+                  <div class="block-pod-menu"></div>
+              </div>
+          </div>
+
+      </div>
+
+      <!-- Очистка обтекания -->
+      <div class="myclr"></div>
+
+      <!-- Подвал -->
+      <div id="podval">
+          <div class="yellow"></div>
+          <div class="p1">ООО “Julia's Flowers” 2024<br/>
+          г. Санкт-Петербург, Дворцовая пл., 2</div>
+          <div class="p3"><img src="../images/stat.png" alt="" title="" /></div>
+          <div class="p2">Создание сайта: студия <a href="#">«Julia's CodeCraft»</a></div>
+      </div>
+
+      <!-- Очистка обтекания -->
+      <div class="myclr"></div>
+
+    </div>
+</body>
+</html>
